@@ -1,12 +1,17 @@
- /* bring in normalize.css styles */
+@import './styles/_reset.scss';
+@import './styles/_mixins.scss';
+@import './styles/_container.scss';
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.7960434173669468) 39%,
+    rgba(125, 100, 0, 0.7120098039215687) 83%,
+    rgba(255, 204, 0, 1) 100%
+  );
+  color: #e0e0e0;
 }
 
 code {
