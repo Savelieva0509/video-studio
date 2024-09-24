@@ -20,6 +20,8 @@ body {
       #5d4a1f 62.5%,
       #5d4a1f 100%
     );
+
+  min-height: 100vh;
   color: #e0e0e0;
 }
 
