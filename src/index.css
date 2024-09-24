@@ -1,16 +1,25 @@
 @import './styles/_reset.scss';
 @import './styles/_mixins.scss';
-@import './styles/_container.scss';
 
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.7960434173669468) 39%,
-    rgba(125, 100, 0, 0.7120098039215687) 83%,
-    rgba(255, 204, 0, 1) 100%
-  );
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #fdb931 8%,
+      #9f7928 30%,
+      #8a6e2f 40%,
+      transparent 80%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
   color: #e0e0e0;
 }
 

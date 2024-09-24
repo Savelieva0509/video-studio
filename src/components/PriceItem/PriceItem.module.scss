@@ -1,22 +1,16 @@
-@import '../../styles/_mixins.scss';
+@import '../../styles/mixins';
 
-.priceItem {
+.priceItemWrapper {
   padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   transition: box-shadow 0.3s ease;
   background-color: rgba(40, 40, 40, 0.8);
+  font-size: 18px;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-  }
-
-  @include mobile {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   @include tablet {
@@ -29,14 +23,10 @@
   }
 }
 
-.header {
+.infoList {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  gap: 10px;
   align-items: center;
-  @include mobile {
-    justify-content: flex-start;
-  }
 }
 
 .category {
@@ -53,10 +43,11 @@
 
 .price {
   color: #ffcc00;
+  white-space: nowrap;
 }
 
 .description {
   margin-top: 10px;
   color: #d1d1d1;
-  font-size: 0.9em;
+  font-size: 16px;
 }

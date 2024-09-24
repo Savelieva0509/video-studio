@@ -11,22 +11,20 @@ const categorizedServices = [
 
 const PriceList: React.FC = () => {
   return (
-    <div className={s.priceList}>
-      <ul>
-        {categorizedServices.map(categoryItem =>
-          categoryItem.services.map((service, index) => (
-            <li key={index} className={s.priceListItem}>
-              <PriceItem
-                category={categoryItem.category}
-                name={service.name}
-                price={service.price}
-                description={service.description}
-              />
-            </li>
-          ))
-        )}
-      </ul>
-    </div>
+    <ul className={s.priceList}>
+      {categorizedServices.map(categoryItem =>
+        categoryItem.services.map((service, index) => (
+          <li key={index} className={s.priceListItem}>
+            <PriceItem
+              category={categoryItem.category}
+              name={service.name}
+              price={service.price}
+              description={service.description}
+            />
+          </li>
+        ))
+      )}
+    </ul>
   );
 };
 

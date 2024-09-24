@@ -1,7 +1,9 @@
-@import '../../styles/_mixins.scss';
+@import '../../styles/mixins';
 
+.priceListWrapper {
+  padding: 20px;
+}
 .priceList {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
@@ -12,6 +14,30 @@
     padding: 15px;
   }
   @include desktop {
+    max-height: 600px;
+    overflow-y: auto;
     padding: 30px;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #f1c40f;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #e0b10d;
+    }
   }
+}
+
+.priceListItem:not(:last-child) {
+  margin-bottom: 20px;
 }

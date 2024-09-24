@@ -22,18 +22,18 @@ const PriceItem: React.FC<PriceItemProps> = ({
   };
 
   return (
-    <div className={s.priceItem}>
-      <div className={s.header} onClick={toggleDescription}>
-        <span className={s.category}>{category}</span> {/* Категория услуги */}
-        <span className={s.name}>{name}</span>
-        <span className={s.price}>{price} грн</span>
+    <div className={s.priceItemWrapper} onClick={toggleDescription}>
+      <ul className={s.infoList} >
+        <li className={`${s.category} ${s.infoItem}`}>{category}</li>
+        <li className={`${s.name} ${s.infoItem}`}>{name}</li>
+        <li className={`${s.price} ${s.infoItem}`}>{price} грн</li>
         {isOpen ? (
           <FaChevronUp className={s.icon} />
         ) : (
           <FaChevronDown className={s.icon} />
         )}
-      </div>
-      {isOpen && <div className={s.description}>{description}</div>}
+      </ul>
+      {isOpen && <p className={s.description}>{description}</p>}
     </div>
   );
 };
