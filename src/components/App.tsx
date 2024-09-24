@@ -3,7 +3,7 @@ import PriceList from './PriceList/PriceList';
 
 function App() {
   return (
-    <div>
+    <div className='container'>
       <AppBar />
       <PriceList />
     </div>

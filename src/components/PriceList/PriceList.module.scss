@@ -1,18 +1,17 @@
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
+@import '../../styles/_mixins.scss';
 
-.noResults {
-  font-size: 1.5rem;
-  color: #ff0000;
-  text-align: center;
-  margin: 20px 0;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #fff5f5;
+.priceList {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(30, 30, 30, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+
+  @include tablet {
+    padding: 15px;
+  }
+  @include desktop {
+    padding: 30px;
+  }
 }
