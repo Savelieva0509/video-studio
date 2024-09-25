@@ -15,8 +15,6 @@ const PriceList: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
-  
-
   const filteredServices = selectedCategory
     ? categorizedServices.filter(
         categoryItem =>
@@ -40,9 +38,9 @@ const PriceList: React.FC = () => {
   const handleFilterChange = (category: string) => {
     setSelectedCategory(category);
   };
-const handleSortChange = (order: string) => {
-  setSortOrder(order as 'asc' | 'desc');
-};
+  const handleSortChange = (order: string) => {
+    setSortOrder(order as 'asc' | 'desc');
+  };
   return (
     <>
       <div className={s.controlsWrapper}>

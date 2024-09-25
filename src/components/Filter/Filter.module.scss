@@ -1,16 +1,18 @@
+@import '../../styles/mixins';
+
 .filterDropdown {
   position: relative;
 }
 
 .filterButton {
-  padding: 10px 20px;
+  padding: 10px;
   background-color: #333;
   color: #fff;
   border: none;
   border-radius: 5px;
   display: flex;
   gap: 10px;
-  font-size: 18px;
+  font-size: 16px;
   align-items: center;
   cursor: pointer;
 
@@ -19,6 +21,10 @@
   &:hover {
     background-color: #555;
   }
+  
+  @include mobile {
+     font-size: 18px;
+  }
 }
 
 .dropdownList {
@@ -26,10 +32,10 @@
   top: 100%;
   left: 0;
   background-color: #444;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 2;
 }
 
 .dropdownList li {

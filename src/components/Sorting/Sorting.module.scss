@@ -1,12 +1,16 @@
+@import '../../styles/mixins';
+
 .sortButton {
-  padding: 10px 20px;
+  padding: 10px;
   background-color: #333;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   border-radius: 5px;
   display: flex;
   align-items: center;
+  width: 190px;
+  justify-content: space-between;
 
   transition: background-color 0.3s ease;
 
@@ -14,7 +18,8 @@
     background-color: #555;
   }
 
-  .sortIcon {
-    margin-left: 10px;
+  @include mobile {
+    font-size: 18px;
+    width: 210px;
   }
 }
