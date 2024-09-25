@@ -42,7 +42,7 @@ const PriceList: React.FC = () => {
     setSortOrder(order as 'asc' | 'desc');
   };
   return (
-    <>
+    <div className='container'>
       <div className={s.controlsWrapper}>
         <Filter
           onFilterChange={handleFilterChange}
@@ -64,7 +64,7 @@ const PriceList: React.FC = () => {
           ))
         )}
       </ul>
-    </>
+    </div>
   );
 };
 
