@@ -1,7 +1,5 @@
-import Filter from "../Filter/Filter";
-
 const AppBar = () => {
-  return <Filter/>;
+  return <>AppBar</>;
 };
 
 export default AppBar;
