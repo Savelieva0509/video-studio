@@ -54,7 +54,7 @@ code {
   }
 
   @media (min-width: 1025px) {
-    max-width: 1400px;
-    padding: 50px;
+    max-width: 1200px;
+    padding: 35px;
   }
 }
