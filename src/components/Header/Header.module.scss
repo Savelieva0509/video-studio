@@ -1,0 +1,39 @@
+@import '../../styles/mixins';
+
+.header {
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 50px;
+
+  @include tablet {
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo {
+  width: 400px;
+
+  @include tablet {
+    margin-right: -70px;
+  }
+}
+
+.slogan {
+  margin-top: -50px;
+  font-size: 22px;
+  font-weight: 800;
+
+  @include mobile {
+    font-size: 28px;
+  }
+  @include tablet {
+    margin-top: 0;
+    font-size: 40px;
+  }
+  @include tablet {
+    font-size: 45px;
+  }
+}
