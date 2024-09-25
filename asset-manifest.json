@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/video-studio/static/css/main.efd9826a.css",
+    "main.js": "/video-studio/static/js/main.bca32a25.js",
+    "static/media/logo.png": "/video-studio/static/media/logo.cef30be8471256b542be.png",
+    "index.html": "/video-studio/index.html",
+    "main.efd9826a.css.map": "/video-studio/static/css/main.efd9826a.css.map",
+    "main.bca32a25.js.map": "/video-studio/static/js/main.bca32a25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efd9826a.css",
+    "static/js/main.bca32a25.js"
+  ]
+}
