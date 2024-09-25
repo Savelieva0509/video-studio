@@ -1,25 +1,28 @@
-<h1 align="center">Tasks Manager App</h1>
+<h1 align="center">Video Studio</h1>
 
 <p align="center">
 <img src="assets/prev.jpg" width="500">
 </p>
 
-Tasks Manager is a web application for organizing tasks. It allows users to add
-tasks to them, and move tasks between different statuses.
+**Video Studio** is a web application designed to create and preserve memories
+through photography and videography services. The application provides a
+user-friendly interface for users to explore various services, view a dynamic
+price list.
 
 ## Features
 
-- **Add Tasks:** Users can to add tasks with titles, descriptions and to upload
-  different files.
-- **Manage Tasks:** The user can change the task status to completed.
-- **Edit Tasks:** Users can edit task titles and descriptions directly in the
-  application. And also replace attached files.
-- **Delete Tasks:** The user can transfer the task to the archive and return to
-  it later to make a final decision on it.
-- **Filter and Counter:** For ease of use there is a filter and task counter.
-- **Search:** The user can find a task by starting to enter any words from its title.
+- **Responsive Design**: The application is designed to work seamlessly on
+  devices of all sizes, ensuring an optimal user experience.
+- **Dynamic Price List**: Users can view a categorized list of services with
+  their corresponding prices and open detailed info.
+- **Filtering Options**: Users can filter services by type (Photography, Video,
+  All Services).
+- **Sorting Option**: the user can sort the price list by ascending or
+  descending price.
 
 ## Technologies Used
 
- TypeScript, React, Redux, React Router, Bootstrap, Validation Forms, Adaptive Design
-
+- **React**: For building the user interface.
+- **TypeScript**: For type safety and better development experience.
+- **SCSS**: For styling components with a modular approach.
+- **React Icons**: For incorporating scalable vector icons.
