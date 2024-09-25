@@ -1,7 +1,7 @@
 <h1 align="center">Video Studio</h1>
 
 <p align="center">
-<img src="assets/prev.jpg" width="500">
+<img src="src/assets/prev.jpg" width="500">
 </p>
 
 **Video Studio** is a web application designed to create and preserve memories
