@@ -7,7 +7,7 @@
   margin-bottom: 30px;
 
   @include mobile {
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     flex-direction: row;
   }
@@ -49,5 +49,5 @@
 }
 
 .priceListItem:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }

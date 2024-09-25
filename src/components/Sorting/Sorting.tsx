@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {FC, useState } from 'react';
 import { FaSortAmountDownAlt, FaSortAmountUpAlt } from 'react-icons/fa';
 import s from './Sorting.module.scss';
 
@@ -6,7 +6,7 @@ interface SortingProps {
   onSortChange: (order: string) => void;
 }
 
-const Sorting: React.FC<SortingProps> = ({ onSortChange }) => {
+const Sorting: FC<SortingProps> = ({ onSortChange }) => {
   const [sortOrder, setSortOrder] = useState('asc');
 
   const handleSortToggle = () => {

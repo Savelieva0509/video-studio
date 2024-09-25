@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { FC, useState } from 'react';
 import { FaFilter } from 'react-icons/fa6';
 import s from './Filter.module.scss';
 
@@ -7,10 +7,7 @@ type FilterProps = {
   selectedCategory: string;
 };
 
-const Filter: React.FC<FilterProps> = ({
-  onFilterChange,
-  selectedCategory,
-}) => {
+const Filter: FC<FilterProps> = ({ onFilterChange, selectedCategory }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);

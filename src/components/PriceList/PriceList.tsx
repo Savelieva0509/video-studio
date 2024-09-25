@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import PriceItem from '../PriceItem/PriceItem';
 import { services } from '../../servicesData';
 import Filter from '../Filter/Filter';
@@ -11,7 +11,7 @@ const categorizedServices = [
   { category: 'Інше', services: services.Others },
 ];
 
-const PriceList: React.FC = () => {
+const PriceList: FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
@@ -42,7 +42,7 @@ const PriceList: React.FC = () => {
     setSortOrder(order as 'asc' | 'desc');
   };
   return (
-    <div className='container'>
+    <div>
       <div className={s.controlsWrapper}>
         <Filter
           onFilterChange={handleFilterChange}

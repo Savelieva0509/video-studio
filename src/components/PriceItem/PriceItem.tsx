@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import {FC, useState } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import s from './PriceItem.module.scss';
 
@@ -9,7 +9,7 @@ interface PriceItemProps {
   description: string;
 }
 
-const PriceItem: React.FC<PriceItemProps> = ({
+const PriceItem: FC<PriceItemProps> = ({
   category,
   name,
   price,
