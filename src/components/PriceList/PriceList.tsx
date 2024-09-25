@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PriceItem from '../PriceItem/PriceItem';
 import { services } from '../../servicesData';
 import Filter from '../Filter/Filter';
+import Sorting from '../Sorting/Sorting';
 import s from './PriceList.module.scss';
 
 const categorizedServices = [
@@ -12,6 +13,9 @@ const categorizedServices = [
 
 const PriceList: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+
+  
 
   const filteredServices = selectedCategory
     ? categorizedServices.filter(
@@ -20,21 +24,36 @@ const PriceList: React.FC = () => {
       )
     : categorizedServices;
 
-  console.log(filteredServices, 'filteredServices');
-  console.log(selectedCategory, 'selectedCategory');
+  const sortedServices = filteredServices.map(categoryItem => {
+    return {
+      ...categoryItem,
+      services: [...categoryItem.services].sort((a, b) => {
+        if (sortOrder === 'asc') {
+          return a.price - b.price;
+        } else {
+          return b.price - a.price;
+        }
+      }),
+    };
+  });
 
   const handleFilterChange = (category: string) => {
     setSelectedCategory(category);
   };
-
+const handleSortChange = (order: string) => {
+  setSortOrder(order as 'asc' | 'desc');
+};
   return (
-    <div className={s.priceListWrapper}>
-      <Filter
-        onFilterChange={handleFilterChange}
-        selectedCategory={selectedCategory}
-      />
+    <>
+      <div className={s.controlsWrapper}>
+        <Filter
+          onFilterChange={handleFilterChange}
+          selectedCategory={selectedCategory}
+        />
+        <Sorting onSortChange={handleSortChange} />
+      </div>
       <ul className={s.priceList}>
-        {filteredServices.map(categoryItem =>
+        {sortedServices.map(categoryItem =>
           categoryItem.services.map((service, index) => (
             <li key={index} className={s.priceListItem}>
               <PriceItem
@@ -47,7 +66,7 @@ const PriceList: React.FC = () => {
           ))
         )}
       </ul>
-    </div>
+    </>
   );
 };
 

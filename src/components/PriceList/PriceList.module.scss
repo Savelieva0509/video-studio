@@ -1,15 +1,18 @@
 @import '../../styles/mixins';
 
-.priceListWrapper {
-  padding: 20px;
+.controlsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
+
 .priceList {
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
   background-color: rgba(30, 30, 30, 0.9);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
-  
 
   @include tablet {
     padding: 15px;
